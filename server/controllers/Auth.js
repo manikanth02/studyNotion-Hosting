@@ -208,8 +208,9 @@ exports.sendotp = async (req, res) => {
         upperCaseAlphabets: false,
       })
     }
-    // const otpPayload = { email, otp }
-    // const otpBody = await OTP.create(otpPayload)
+    const otpPayload = { email, otp }
+    /*eslint-disable-next-line*/
+    const otpBody = await OTP.create(otpPayload)
     // console.log("OTP Body", otpBody)
     res.status(200).json({
       success: true,
